@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Calculator</title>
+    <title>Orbital Guard ROI Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Personal Calculator</h1>
+<div class="calculator-card">
+    <h1>Orbital ROI Calculator</h1>
+    
+    <form id="calculatorForm">
+        <label for="userName">Ваше имя (Оператор):</label>
+        <input type="text" id="userName" placeholder="Введите имя" required>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+        <label for="satCost">Стоимость спутника (млн $):</label>
+        <input type="number" id="satCost" value="200" required>
 
-<div id="output">
-    <!-- Results will be displayed here -->
+        <label for="maneuverCount">Отменено маневров (NeuralX):</label>
+        <input type="number" id="maneuverCount" placeholder="Напр: 50" required>
+
+        <button type="button" onclick="calculateROI()">Рассчитать профит</button>
+    </form>
+
+    <div id="output">
+        </div>
 </div>
 
 <script src="script.js"></script>
